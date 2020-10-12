@@ -12,7 +12,7 @@ export default class Bomb extends React.Component {
 
     countdown = () => {
         setTimeout(() => {
-            {this.state.secondsLeft} - 1
+            this.state.secondsLeft - 1 
         }, 1000)
     }
 
@@ -23,7 +23,7 @@ export default class Bomb extends React.Component {
             )
         } else {
             return (
-                <div>
+                <div onClick={this.countdown()}>
                     {this.state.secondsLeft} seconds left before I go boom!
                 </div>
             )
